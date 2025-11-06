@@ -1,0 +1,1071 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of service | Healwell Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+ <style>
+        :root {
+            --primary: #0f766e;
+            --primary-light: #14b8a6;
+            --secondary: #06b6d4;
+            --accent: #8b5cf6;
+            --dark: #04263a;
+            --light: #f6fbff;
+            --gray: #6b7280;
+            --white: #ffffff;
+            --radius: 16px;
+            --shadow: 0 8px 30px rgba(11,22,40,0.08);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 22px;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-text {
+            font-weight: 800;
+            font-size: 26px;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            font-size: 15px;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(15, 118, 110, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(15, 118, 110, 0.4);
+            color: white;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(4, 38, 58, 0.85), rgba(4, 38, 58, 0.9)), 
+                        url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-title {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+        
+        .hero-description {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 6px 20px rgba(15, 118, 110, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(15, 118, 110, 0.5);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--dark);
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: left;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(11,22,40,0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3);
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .service-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .service-link:hover {
+            gap: 12px;
+            color: var(--secondary);
+        }
+        
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f8f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(15, 118, 110, 0.05) 100%);
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .features-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+        
+        .features-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+        
+        .features-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+        
+        .feature-content h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .feature-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .stat-item h3 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 24px;
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: """;
+            font-size: 60px;
+            color: var(--primary-light);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--dark) 0%, #0a2a3e 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(15, 118, 110, 0.1) 100%);
+        }
+        
+        .cta::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+        }
+        
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        /* Booking Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 50px auto;
+            max-width: 800px;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalFadeIn 0.4s ease-out;
+        }
+        
+        .modal-header {
+            padding: 30px 40px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 30px 40px;
+        }
+        
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+        }
+        
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        
+        .form-submit .btn {
+            width: 100%;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .features-image {
+                transform: none;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 20px 20px;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .hero-description {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .services-grid, .testimonials-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .modal-content {
+                margin: 20px auto;
+            }
+            
+            .modal-header, .modal-body {
+                padding: 20px;
+            }
+        }
+    </style>
+<!-- Header -->
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <div class="logo-icon">H</div>
+      <div class="logo-text">Healwell Pro</div>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <ul id="mainNav">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#" class="nav-cta" id="bookAppointmentNav">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Page Content -->
+<section class="policy-page" style="padding: 80px 0; background: #f9fafb;">
+
+<div class="container">
+<h1>Terms of services</h1>
+<p><strong>Last Updated:</strong> January 2025</p>
+
+
+<p>These Terms of Service ("Terms") govern your use of the <strong>Healwell</strong> website and healthcare services. By accessing our services, you agree to comply with these Terms.</p>
+
+
+<h2>1. Use of Services</h2>
+<p>Our healthcare services are provided for personal medical support. You agree not to misuse, resell, or exploit our services for unauthorized purposes.</p>
+
+
+<h2>2. Medical Disclaimer</h2>
+<p>Healwell provides medical guidance, but treatment outcomes may vary. Always follow instructions from licensed healthcare professionals.</p>
+
+
+<h2>3. User Responsibilities</h2>
+<ul>
+<li>Provide accurate personal and medical information.</li>
+<li>Use services legally and ethically.</li>
+<li>Respect appointment schedules and healthcare staff.</li>
+</ul>
+
+
+<h2>4. Account Security</h2>
+<p>You are responsible for maintaining the confidentiality of your account details. Notify us immediately of unauthorized access.</p>
+
+
+<h2>5. Payments and Billing</h2>
+<p>Some services may require payment. Fees will be clearly communicated. No hidden charges will be applied.</p>
+
+
+<h2>6. Service Changes</h2>
+<p>We may modify or update services without prior notice, but we aim to maintain service availability.</p>
+
+
+<h2>7. Termination</h2>
+<p>We reserve the right to suspend or terminate access if these Terms are violated.</p>
+
+
+<h2>8. Limitation of Liability</h2>
+<p>Healwell is not liable for indirect or accidental damages arising from service use, except where prohibited by law.</p>
+
+
+<h2>9. Governing Law</h2>
+<p>These Terms are governed by applicable local laws and healthcare regulations.</p>
+
+
+<h2>10. Contact Us</h2>
+<p><strong>Healwell Support Team</strong><br>Email: support@healwell.com<br>Phone: +92 123-4567</p>
+</div>
+
+
+<!-- <footer>© 2025 Healwell. All rights reserved.</footer> -->
+</body>
+</html>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon">H</div>
+          <div class="logo-text">Healwell Pro</div>
+        </div>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.7);">Premium healthcare solutions with a focus on patient experience, modern technology, and compassionate care.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Karachi</p>
+          <p><i class="fas fa-phone"></i> +92 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@healwellpro.com</p>
+          <p><i class="fas fa-clock"></i> Mon-Fri: 8am-8pm</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 DEVELOPED BY FAISAL FAYYAZ. All rights reserved.</p>
+      <div>
+        <a href="Privacy-policy.html" style="margin-right: 15px; color: rgba(255,255,255,0.5);">Privacy Policy</a>
+        <a href="Terms-of-service-page.html" style="margin-right: 15px; color: rgba(255,255,255,0.5);">Terms of Service</a>
+        <a href="Accessibility-page.html" style="color: rgba(255,255,255,0.5);">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
